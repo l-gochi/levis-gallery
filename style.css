@@ -1,0 +1,740 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    color: rgb(72, 48, 34);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+    -webkit-text-stroke: 0;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    height: 20vh;
+
+    padding: 45px 60px 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 2px;
+
+    color: rgb(239, 226, 204);
+
+    -webkit-text-stroke: 1.5px rgb(55, 35, 22);
+
+    text-shadow:
+        2px 2px 0 rgb(55, 35, 22),
+        4px 5px 10px rgba(30, 18, 10, 0.35);
+}
+
+header h1 u {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+header p {
+    margin: 12px 0 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    color: rgb(105, 78, 57);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   PAGE NAVIGATION
+   ========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    color: rgb(91, 61, 40);
+
+    border: 1px solid rgb(116, 84, 58);
+    background: rgba(235, 221, 199, 0.25);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+nav a span {
+    font-size: 10px;
+    letter-spacing: 0;
+    opacity: 0.5;
+}
+
+nav a:hover {
+    color: rgb(55, 35, 22);
+    border-color: rgb(91, 61, 40);
+    background: rgba(235, 221, 199, 0.65);
+}
+
+nav a.active {
+    border-color: rgb(91, 61, 40);
+    background: rgba(235, 221, 199, 0.8);
+}
+
+nav a.active span {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   GALLERY
+   ========================= */
+
+.gallery {
+    height: 80vh;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 55px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 25px 60px 80px;
+
+    scroll-behavior: smooth;
+
+    overscroll-behavior-y: none;
+}
+
+
+/* =========================
+   ARTWORK
+   ========================= */
+
+.artwork {
+    flex: 0 0 auto;
+
+    width: 330px;
+
+    color: rgb(72, 48, 34);
+
+    cursor: pointer;
+
+    transition: transform 0.35s ease;
+}
+
+.artwork:hover {
+    transform: translateY(-8px);
+}
+
+.artwork img {
+    width: 330px;
+    height: 380px;
+
+    object-fit: contain;
+
+    display: block;
+
+    padding: 14px;
+
+    background: rgb(235, 221, 199);
+
+    border: 1px solid rgb(116, 84, 58);
+
+    box-shadow:
+        0 3px 0 rgb(91, 61, 40),
+        0 8px 20px rgba(50, 30, 15, 0.25);
+
+    transition:
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+.artwork:hover img {
+    box-shadow:
+        0 3px 0 rgb(91, 61, 40),
+        0 14px 30px rgba(50, 30, 15, 0.35);
+}
+
+.artwork h2 {
+    margin: 22px 0 0;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: rgb(69, 44, 29);
+}
+
+
+/* =========================
+   HORIZONTAL SCROLLBAR
+   ========================= */
+
+.gallery::-webkit-scrollbar {
+    height: 12px;
+}
+
+.gallery::-webkit-scrollbar-track {
+    margin: 0 60px;
+
+    background: rgba(91, 61, 40, 0.15);
+
+    border-radius: 20px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background: rgb(116, 84, 58);
+
+    border-radius: 20px;
+
+    border: 3px solid transparent;
+
+    background-clip: padding-box;
+}
+
+.gallery::-webkit-scrollbar-thumb:hover {
+    background: rgb(91, 61, 40);
+
+    border: 3px solid transparent;
+
+    background-clip: padding-box;
+}
+
+.gallery {
+    scrollbar-color: rgb(116, 84, 58) rgba(91, 61, 40, 0.15);
+    scrollbar-width: thin;
+}
+
+
+/* =========================
+   POPUP BACKGROUND
+   ========================= */
+
+.popup {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(45, 29, 18, 0.65);
+
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   POPUP BOX
+   ========================= */
+
+.popup-content {
+    position: relative;
+
+    width: min(1000px, 92vw);
+    max-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 45px;
+
+    background: rgb(239, 226, 204);
+
+    border: 1px solid rgb(116, 84, 58);
+
+    box-shadow:
+        0 5px 0 rgb(91, 61, 40),
+        0 20px 50px rgba(30, 18, 10, 0.45);
+
+    animation: popupOpen 0.25s ease;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   POPUP IMAGE
+   ========================= */
+
+.popup-image-container {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+#popupImage {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    padding: 12px;
+
+    background: rgb(225, 209, 185);
+
+    border: 1px solid rgb(116, 84, 58);
+
+    box-shadow:
+        0 3px 0 rgb(91, 61, 40),
+        0 8px 20px rgba(50, 30, 15, 0.25);
+}
+
+
+/* =========================
+   POPUP INFORMATION
+   ========================= */
+
+.popup-information {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.popup-information h2 {
+    margin: 0 0 10px;
+
+    font-size: 34px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+    color: rgb(69, 44, 29);
+}
+
+.popup-artist {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    color: rgb(124, 91, 62);
+}
+
+.popup-line {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: rgb(154, 123, 94);
+}
+
+#popupDescription {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: rgb(91, 69, 52);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+   ========================= */
+
+.close-button {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+
+    color: rgb(91, 61, 40);
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.close-button:hover {
+    color: rgb(55, 35, 22);
+
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   POPUP ANIMATION
+   ========================= */
+
+@keyframes popupOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 750px) {
+
+    .popup-content {
+        width: 92vw;
+
+        max-height: 90vh;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 35px 25px;
+
+        overflow-y: auto;
+    }
+
+    #popupImage {
+        max-height: 45vh;
+    }
+
+    .popup-information h2 {
+        font-size: 27px;
+    }
+
+}
+
+/* =========================
+   BACKGROUND VIGNETTE
+   ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 45%,
+        rgba(0, 0, 0, 0.18) 75%,
+        rgba(0, 0, 0, 0.70) 100%
+    );
+}
+
+/* =========================
+   COVER PAGE
+   ========================= */
+
+.cover-page {
+    overflow: hidden;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(45, 29, 18, 0.08),
+            rgba(45, 29, 18, 0.08)
+        );
+
+    pointer-events: none;
+}
+
+.cover-content {
+    width: min(650px, 85vw);
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 70px 50px;
+
+    background: rgba(239, 226, 204, 0.72);
+
+    border: 1px solid rgb(116, 84, 58);
+
+    box-shadow:
+        0 5px 0 rgb(91, 61, 40),
+        0 20px 50px rgba(30, 18, 10, 0.3);
+}
+
+.cover-small {
+    margin: 0 0 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: rgb(124, 91, 62);
+
+    opacity: 0.75;
+}
+
+.cover h1 {
+    margin: 0;
+
+    font-size: 58px;
+    font-weight: normal;
+    letter-spacing: 3px;
+
+    color: rgb(75, 47, 31);
+
+    text-shadow:
+        1px 1px 0 rgba(255, 245, 225, 0.8),
+        3px 3px 8px rgba(50, 30, 15, 0.15);
+}
+
+.cover h1 u {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.cover-subtitle {
+    margin: 20px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 5px;
+
+    color: rgb(105, 78, 57);
+}
+
+.cover-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: rgb(116, 84, 58);
+}
+
+.cover-description {
+    max-width: 450px;
+
+    margin: 0 auto 40px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+
+    color: rgb(91, 69, 52);
+}
+
+.enter-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    color: rgb(239, 226, 204);
+
+    background: rgb(91, 61, 40);
+
+    border: 1px solid rgb(91, 61, 40);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.enter-button:hover {
+    color: rgb(91, 61, 40);
+
+    background: rgba(239, 226, 204, 0.9);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   EXIT BUTTON
+   ========================= */
+
+.exit-button {
+    position: fixed;
+
+    top: 25px;
+    right: 35px;
+
+    padding: 9px 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    color: rgb(91, 61, 40);
+
+    border: 1px solid rgb(116, 84, 58);
+    background: rgba(235, 221, 199, 0.5);
+
+    z-index: 500;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.exit-button:hover {
+    color: rgb(239, 226, 204);
+
+    background: rgb(91, 61, 40);
+
+    border-color: rgb(91, 61, 40);
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   DESCRIPTION IMAGE
+   ========================= */
+
+.popup-description-image {
+    display: none;
+
+    width: 100%;
+    max-width: 350px;
+    max-height: 250px;
+
+    object-fit: contain;
+
+    margin: 0 auto 25px;
+
+    padding: 8px;
+
+    background: rgb(235, 221, 199);
+
+    border: 1px solid rgb(116, 84, 58);
+
+    box-shadow:
+        0 3px 0 rgb(91, 61, 40),
+        0 8px 20px rgba(50, 30, 15, 0.2);
+}

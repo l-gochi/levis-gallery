@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Future</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <div class="header-text">
+
+            <h1>
+                <u>Evidence</u>
+            </h1>
+
+            <p>
+                The Proof of My Work
+            </p>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a href="index.html" class="exit-button">
+                Exit
+            </a>
+
+            <a href="gallery.html">
+                <span>A</span>
+                ← Levi's Gallery
+            </a>
+
+            <a href="people.html">
+                <span>B</span>
+                ← People in My Life
+            </a>
+
+            <a href="future.html">
+                <span>C</span>
+                ← My Future
+            </a>
+
+            <a href="perspectives.html">
+                <span>D</span> 
+                ← Other Perspectives
+            </a>
+
+            <a href="evidence.html" class="active">
+                <span>E</span>
+                Evidence
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         FUTURE GALLERY
+         ========================= -->
+
+    <main class="gallery">
+
+
+        <!-- EVIDENCE 1 -->
+
+        <div class="artwork"
+             data-title="Evidence 1"
+             data-artist="Proof"
+             data-description="This is the code that goes into this webpage that allows you to click on the image and read this description.">
+
+            <img src="images/evidence1.png" alt="Future One">
+
+            <h2>
+                Evidence 1
+            </h2>
+
+        </div>
+
+
+
+        <!-- FUTURE 2 -->
+
+        <div class="artwork"
+             data-title="Evidence 2"
+             data-artist="Proof"
+             data-description="This is the code that allows you to navigate through different pages. Each .html represents a page, when you click a button it opens that specific .html file.">
+
+            <img src="images/evidence2.png" alt="Future Two">
+
+            <h2>
+                Evidence 2
+            </h2>
+
+        </div>
+
+
+
+        <!-- FUTURE 3 -->
+
+        <div class="artwork"
+             data-title="Evidence 3"
+             data-artist="Proof"
+             data-description="This is the code that decides the style of the text shown, such as colour, font, size, spacing, etc. There are many variants of these that control different text within the webpage. Along with the three of these screenshots, there are around 2000 lines of code that go into this.">
+
+            <img src="images/evidence3.png" alt="Future Three">
+
+            <h2>
+                Evidence 3
+            </h2>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FUTURE POPUP
+         ========================= -->
+
+    <div id="artworkPopup" class="popup">
+
+        <div class="popup-content">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button id="closeButton" class="close-button">
+                ×
+            </button>
+
+
+
+            <!-- LARGE IMAGE -->
+
+            <div class="popup-image-container">
+
+                <img id="popupImage" src="" alt="">
+
+            </div>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="popup-information">
+
+                <h2 id="popupTitle"></h2>
+
+                <p id="popupArtist" class="popup-artist"></p>
+
+                <div class="popup-line"></div>
+
+                <p id="popupDescription"></p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Other Perspectives</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-text">
+
+            <h1>
+                <u>Other Perspectives</u>
+            </h1>
+
+            <p>
+                Through Another Pair of Eyes
+            </p>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="exit-button">
+                Exit
+            </a>
+
+            <a href="gallery.html">
+                <span>A</span>
+                ← Levi's Gallery
+            </a>
+
+            <a href="people.html">
+                <span>B</span>
+                ← People in My Life
+            </a>
+
+            <a href="future.html">
+                <span>C</span>
+                ← My Future
+            </a>
+
+            <a href="perspectives.html" class="active">
+                <span>D</span>
+                Other Perspectives
+            </a>
+
+            <a href="evidence.html">
+                <span>E</span>
+                Evidence →
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="gallery">
+
+
+        <div class="artwork"
+             data-title="Brayden"
+             data-artist="A Perspective"
+             data-description="Brayden's message meant a lot to me because it reminded me that the support I gave him during a difficult time in his life actually mattered. Sometimes I don't realise how much I can affect the people around me, so hearing that he considers me one of the greatest friends he's had made me feel genuinely appreciated. It also made me realise that being there for someone doesn't always require having the perfect words or knowing exactly what to do. Sometimes simply understanding someone and staying by their side can mean more than I realise.">
+            <img src="images/ss1.png" alt="Brayden">
+            <h2>Brayden</h2>
+        </div>
+
+
+        <div class="artwork"
+             data-title="Vienne"
+             data-artist="Vienne’s message made me feel really appreciated because she noticed parts of my personality that I don’t always recognise in myself. It was meaningful to hear that she sees me as someone who cares about others and tries to put the people I love first. At the same time, it made me reflect on how I can sometimes put other people’s needs before my own, and I think learning to find a better balance is something I could work on. I also appreciated her saying that I’m hardworking, even though I sometimes see myself as lazy. I know I still have things I can improve on, especially with motivation and consistency, but her message reminded me that I am capable of getting things done when I put my mind to it."
+             data-description="Placeholder">
+            <img src="images/ss2.png" alt="Vienne">
+            <h2>Vienne</h2>
+        </div>
+
+
+        <div class="artwork"
+             data-title="Max"
+             data-artist="A Perspective"
+             data-description="Max’s message made me feel appreciated because he recognised that I genuinely care about my friends and the people around me. I was also glad that he saw me as someone who is hardworking and dedicated to the things I enjoy. However, I found his criticism meaningful because it gave me something to reflect on. I know that I can sometimes make assumptions about people based on my own thoughts or experiences, so I could work on being more understanding and taking the time to consider things from another person’s perspective. His message reminded me that while I have positive qualities, there are still parts of myself that I can improve.">
+            <img src="images/ss3.png" alt="P3">
+            <h2>Max</h2>
+        </div>
+
+
+        <div class="artwork"
+             data-title="Soccer"
+             data-artist="A Perspective"
+             data-description-image="images/soccer2.png"
+             data-description="(Second to right, No.4) From U10 to U14, I played for Ingle Farm Junior Soccer Club, which became an important part of my childhood and helped shape the person I am today. During U12, I received the MVP trophy for being one of the most reliable and consistent players on the team. I made an effort to show up to every game I could, regardless of my mood, the weather, or even when I was injured. Over time, this taught me the importance of commitment, responsibility and being someone that others can depend on. More than just being an achievement in soccer, my time at the club helped me develop into a more reliable and caring person. It showed me that being a good person isn't just about what you say, but also about consistently being there for the people who rely on you.">
+            <img src="images/soccer1.png" alt="Soccer">
+            <h2>Soccer</h2>
+        </div>
+
+    </main>
+
+
+    <div id="artworkPopup" class="popup">
+
+        <div class="popup-content">
+
+            <button id="closeButton" class="close-button">
+                ×
+            </button>
+
+            <div class="popup-image-container">
+
+                <img id="popupImage" src="" alt="">
+
+            </div>
+
+            <div class="popup-information">
+
+                <h2 id="popupTitle"></h2>
+
+                <p id="popupArtist" class="popup-artist"></p>
+
+                <div class="popup-line"></div>
+
+                <img id="popupDescriptionImage" 
+                    class="popup-description-image" 
+                    src="" 
+                    alt="">
+
+                <p id="popupDescription"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
